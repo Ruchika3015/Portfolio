@@ -1,0 +1,360 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: #e6e9f0;
+    background: linear-gradient(135deg, #050b1e, #0b1638, #1a2a6c);
+    overflow-x: hidden;
+}
+
+/* ================= CALMER FLOATING BLOBS ================= */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    filter: blur(140px);
+    opacity: 0.35;                 /* 👈 calmer */
+    z-index: -1;
+    animation: floatCalm 40s infinite alternate ease-in-out; /* 👈 slower */
+}
+
+body::before {
+    background: #5f8cff;
+    top: -140px;
+    left: -140px;
+}
+
+body::after {
+    background: #9b7bff;
+    bottom: -160px;
+    right: -160px;
+    animation-duration: 55s;       /* 👈 extra calm */
+}
+
+@keyframes floatCalm {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(40px, -30px); /* 👈 subtle movement */
+    }
+}
+
+/* ================= APP ================= */
+.app {
+    max-width: 1100px;
+    margin: auto;
+    padding: 110px 20px 80px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(5, 11, 30, 0.85);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #6aa5ff, #9b7bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6e9f0;
+    font-size: 0.95rem;
+}
+
+/* ================= HERO ================= */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero h1 {
+    font-size: 3.1rem;
+    background: linear-gradient(90deg, #6aa5ff, #9b7bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-line {
+    font-size: 1.25rem;
+    margin-top: 8px;
+}
+
+.typewriter {
+    font-size: 1.1rem;
+    color: #aab4ff;
+    min-height: 1.4em;
+}
+
+.overview {
+    margin-top: 20px;
+    line-height: 1.7;
+    color: #cbd5f5;
+}
+
+.hero-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.btn.primary {
+    background: linear-gradient(135deg, #4f8cff, #7a5cff);
+    color: white;
+    box-shadow: 0 10px 30px rgba(79, 140, 255, 0.35);
+}
+
+.btn.secondary {
+    border: 1px solid #7a5cff;
+    color: #c7ccff;
+}
+
+/* ================= IMAGE ================= */
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 260px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #0b1220;
+    padding: 10px;
+    border: 3px solid rgba(122, 92, 255, 0.6);
+}
+
+/* ================= SECTIONS ================= */
+section {
+    margin-top: 80px;
+    text-align: center;
+}
+
+/* ================= SKILLS & PROJECTS ================= */
+.skill-cards,
+.project-cards {
+    margin-top: 20px;
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card,
+.project-card {
+    width: 260px;
+    padding: 26px;
+    border-radius: 18px;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.02)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.4s ease, background 0.4s ease;
+}
+
+.card:hover,
+.project-card:hover {
+    transform: translateY(-10px) rotate(-0.6deg); /* 👈 softer hover */
+    background: linear-gradient(135deg, #4f8cff, #7a5cff);
+}
+
+.card h3,
+.project-card h3 {
+    color: #9bb5ff;
+}
+
+.card p,
+.project-card p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
+/* ================= PROJECT EXTRAS ================= */
+.project-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #7a5cff;
+}
+
+.learned {
+    margin-top: 14px;
+    font-size: 0.9rem;
+    color: #d5dbff;
+}
+
+/* ================= JOURNEY ================= */
+.step {
+    max-width: 520px;
+    margin: 14px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid #7a5cff;
+    border-radius: 6px;
+}
+
+/* ================= SCROLL REVEAL ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-image {
+        margin-top: 30px;
+    }
+}
+/* ===== FIX PROJECT TEXT VISIBILITY ===== */
+
+.project-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card p {
+    color: #dbe2ff;          /* readable light color */
+    text-decoration: none;
+}
+
+.project-card h3 {
+    color: #9bb5ff;
+}
+
+.project-card .learned,
+.project-card strong {
+    color: #ffffff;
+    text-decoration: none;
+}
+/* ===============================
+   JOURNEY / LEARNING PATH FIX
+================================ */
+
+/* ===== LEARNING PATH – FIXED & BALANCED ===== */
+
+.journey {
+  padding: 80px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #0f1b3d 0%,
+    #15245a 45%,
+    #1c2f73 100%
+  );
+}
+
+.journey h2 {
+  font-size: 2.4rem;
+  color: #eef2ff;
+  margin-bottom: 8px;
+}
+
+.journey .subtitle {
+  font-size: 1rem;
+  color: #c7d2fe;
+  margin-bottom: 40px;
+}
+
+/* Timeline container */
+.timeline {
+  max-width: 680px;          /* wider = more stable */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;                 /* reduced gap */
+  position: relative;
+}
+
+/* Subtle vertical flow cue */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255,255,255,0.15),
+    transparent
+  );
+}
+
+/* Individual step */
+.step {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 16px 28px;
+  color: #e8ebff;
+  font-size: 1rem;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+/* Gentle hover */
+.step:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Highlight current focus */
+.step.active {
+  background: rgba(120, 160, 255, 0.18);
+  border-color: rgba(120, 160, 255, 0.35);
+}
