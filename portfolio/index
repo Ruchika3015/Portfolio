@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruchika | Portfolio</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">R</div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#journey">Journey</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<div class="app">
+
+    <!-- HERO / HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <h1>Hi, I’m Ruchika</h1>
+
+                <p class="main-line">
+                    I enjoy solving problems and building things.
+                </p>
+
+                <p class="typewriter">
+                    <span id="changing-text"></span>
+                </p>
+
+                <p class="overview">
+                    I’m a B.Tech student who enjoys problem-solving and building things from scratch.
+                    I like understanding <em>why</em> something works before jumping into <em>how</em> to implement it.
+                    Right now, I’m learning <strong>Data Structures, Algorithms</strong>, and
+                    <strong>web development</strong>, focusing on strong fundamentals and clarity in logic.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#skills" class="btn primary">View Skills</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <!-- Replace image path if needed -->
+                <img src="images/profile.jpeg" alt="Ruchika">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="skills" id="skills">
+        <h2>Things I’m Learning & Using</h2>
+
+        <div class="skill-cards">
+
+            <div class="card reveal">
+                <h3>C++</h3>
+                <p>Learning core programming concepts and problem-solving logic.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>C</h3>
+                <p>Understanding fundamentals and how things work at a lower level.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>Python</h3>
+                <p>Exploring clean and readable approaches to solving problems.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>HTML</h3>
+                <p>Structuring content clearly and meaningfully.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>CSS</h3>
+                <p>Experimenting with layout and visual clarity.</p>
+            </div>
+
+            <div class="card reveal">
+                <h3>JavaScript</h3>
+                <p>Adding logic and interaction to make ideas come alive.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <h2>Things I’ve Built While Learning</h2>
+
+        <div class="project-cards">
+
+            <div class="project-card reveal">
+                <div class="project-icon">🧮</div>
+                <h3>Calculator</h3>
+                <p>
+                    A simple calculator built to understand how logic connects with user interaction.
+                    This project helped me think clearly about inputs, operations, and outputs.
+                </p>
+                <p class="learned">
+                    <strong>What I learned:</strong> Basic JavaScript logic, DOM events, UI flow
+                </p>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-icon">💼</div>
+                <h3>Personal Portfolio</h3>
+                <p>
+                    This portfolio is a learning project where I explored layout, styling, and interaction.
+                    It reflects how I approach learning and building things step by step.
+                </p>
+                <p class="learned">
+                    <strong>What I learned:</strong> Layout design, responsiveness, clean UI structure
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JOURNEY -->
+    <section class="journey" id="journey">
+  <h2>My Learning Path</h2>
+  <p class="subtitle">
+    This is how I’m learning — slowly, consistently, and with curiosity.
+  </p>
+
+  <div class="timeline">
+    <div class="step">Started with C & C++</div>
+    <div class="step active">Learning DSA</div>
+    <div class="step">Solving problems on LeetCode</div>
+    <div class="step">Exploring HTML, CSS & JavaScript</div>
+    <div class="step">Building projects step by step</div>
+  </div>
+</section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2>Let’s Connect</h2>
+
+        <p>
+            I enjoy learning and building things at my own pace.
+            If you’d like to connect or share ideas, feel free to reach out.
+        </p>
+
+        <div class="contact-links">
+            <a href="mailto:chaudharyruchika206@gmail.com">📧 Email</a>
+            <a href="https://github.com/" target="_blank">💻 GitHub</a>
+        </div>
+    </section>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
